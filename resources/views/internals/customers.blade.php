@@ -36,13 +36,17 @@
         </div>
     </div>
 
+
+
     <hr>
 
     <div class="row">
         <div class="col-12">
             <ol>
                 @foreach ($customers as $customer)
+                        
                     <li>Nome - {{ $customer->name }} <span class="text-muted"><br>Email - {{ $customer->email }}</span></li>
+
                 @endforeach
             </ol>
         </div>
