@@ -63,8 +63,6 @@
         <div class="col-6">
         <h3>Inactive Customers</h3>
             <ol>
-                @foreach ($customers as $customer)    
-                    <li>Nome - {{ $customer->name }} <span class="text-muted"><br>Email - {{ $customer->email }}</span></li>
                 @foreach ($inactiveCustomers as $inactiveCustomer)
                     <li>Nome - {{ $inactiveCustomer->name }} <span class="text-muted"><br>Email - {{ $inactiveCustomer->email }}</span></li>
                 @endforeach
