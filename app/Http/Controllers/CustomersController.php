@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class CustomersController extends Controller
 {
     public function list(){
-        
-    $activeCustomers = Customer::where('active', 1)->get();
-    $inactiveCustomers = Customer::where('active', 0)->get();
+
+    $activeCustomers = Customer::active()->get();
+    $inactiveCustomers = Customer::inactive()->get();
 
     //$customers = Customer::all();
 
@@ -32,12 +32,15 @@ class CustomersController extends Controller
             'active' => 'required'
         ]);
 
+        Customer::create($data);
+
+        /* Tudo isto será substituido pela:
         $customer = new Customer();
         $customer->name = request('name');
         $customer->email = request('email');
         $customer->active = request('active');
         $customer->save();
-        
+        */
         return back();
     }
 }
