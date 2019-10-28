@@ -16,4 +16,10 @@
   <li class="nav-item">
     <a class="nav-link" href="customers">Customers</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="facebook">Facebook</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="github-login">Github</a>
+  </li>
 </ul>
